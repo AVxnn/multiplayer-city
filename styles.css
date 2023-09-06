@@ -155,18 +155,20 @@ html, body {
 }
 .Character_sprite{
     overflow: hidden;
-    top: 5px;
-    left: 5px;
-    background: url(images/character.png);
-    background-position-y: -5px;
+    top: -5px;
+    left: -2px;
+    background: url(images/char_walk_left.gif);
+    background-size: 150%;
+    background-position-y: 5px;
     background-position-x: -5px;
 }
 .Character_shadow {
     position: absolute;
     height: 10px;
-    left: 10px;
+    left: 11px;
     width: 40px;
-    bottom: -10px;
+    transform: scale(0.8);
+    bottom: 0px;
     background: url(images/ShadowCharacter.png) no-repeat no-repeat;
 }
 .Character_name-container{
@@ -188,16 +190,28 @@ html, body {
 }
 
 .Character[data-direction="right"] .Character_sprite {
-    background-position-x: 55px;
+    background: url(images/char_walk_right.gif) !important;
+    background-size: 150% !important;
+    background-position-y: 50px !important;
+    background-position-x: -5px !important;
 }
 .Character[data-color="green"] .Character_sprite {
-    background-position-y: 110px;
+    background: url(images/char_walk_left.gif);
+    background-size: 150%;
+    background-position-y: 50px;
+    background-position-x: -5px;
 }
 .Character[data-color="purple"] .Character_sprite {
-    background-position-y: 165px;
+    background: url(images/char_walk_left.gif);
+    background-size: 150%;
+    background-position-y: 50px;
+    background-position-x: -5px;
 }
 .Character[data-color="yellow"] .Character_sprite {
-    background-position-y: 55px;
+    background: url(images/char_walk_left.gif);
+    background-size: 150%;
+    background-position-y: 50px;
+    background-position-x: -5px;
 }
 
 /* Coins */
