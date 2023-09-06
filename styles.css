@@ -102,7 +102,7 @@ html, body {
     overflow: hidden;
     top: -10px;
     left: 5px;
-    background: url(/images/character.png);
+    background: url(images/character.png);
     background-position-y: -5px;
     background-position-x: -5px;
 }
@@ -142,7 +142,7 @@ html, body {
 .Coin_sprite {
     top: 15px;
     left: 15px;
-    background: url(/images/coin.png) no-repeat no-repeat;
+    background: url(images/coin.png) no-repeat no-repeat;
     animation: coinFloat 0.8s ease-in-out infinite alternate-reverse;
 }
 
