@@ -201,6 +201,12 @@ html, body {
     background-position-y: 50px;
     background-position-x: -5px;
 }
+.Character[data-color="red"] .Character_sprite {
+    background: url(images/char_walk_left.gif);
+    background-size: 150%;
+    background-position-y: 50px;
+    background-position-x: -5px;
+}
 .Character[data-color="purple"] .Character_sprite {
     background: url(images/char_walk_left.gif);
     background-size: 150%;
