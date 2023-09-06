@@ -101,6 +101,12 @@ function getRandomSafeSpot() {
     const playerNameIpnut = document.querySelector("#player-name");
     const playerColorButton = document.querySelector("#player-color");
 
+    
+    const upButton = document.querySelector("#up");
+    const downButton = document.querySelector("#down");
+    const leftButton = document.querySelector("#left");
+    const rightButton = document.querySelector("#right");
+
     function placeCoin() {
         const { x, y} = getRandomSafeSpot();
         const coinRef = firebase.database().ref(`coins/${getKeyString(x, y)}`);
@@ -246,6 +252,28 @@ function getRandomSafeSpot() {
             playerRef.update({
                 color: nextColor,
             })
+        })
+
+        playerColorButton.addEventListener('click', (e) => {
+            const mySkinIndex = playerColors.indexOf(players[playerId].color);
+            const nextColor = playerColors[mySkinIndex + 1] || playerColors[0]
+            console.log(nextColor);
+            playerRef.update({
+                color: nextColor,
+            })
+        })
+
+        upButton.addEventListener('click', (e) => {
+            handlerArrowPress(0, -1)
+        })
+        downButton.addEventListener('click', (e) => {
+            handlerArrowPress(0, 1)
+        })
+        leftButton.addEventListener('click', (e) => {
+            handlerArrowPress(-1, 0)
+        })
+        rightButton.addEventListener('click', (e) => {
+            handlerArrowPress(1, 0)
         })
 
         placeCoin();

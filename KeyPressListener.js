@@ -6,12 +6,17 @@ class KeyPressListener {
                 if (keySafe) {
                     keySafe = false;
                     callback();
+                    setTimeout(() => {
+                        keySafe = true
+                        console.log('ww');
+                    }, 150)
                 }
             }
         };
         this.keyupFunction = function(event) {
             if (event.code === keyCode) {
                 keySafe = true;
+                console.log('wew');
             }
         }
         document.addEventListener("keydown", this.keydownFunction);
